@@ -5,197 +5,106 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gurunadh Malli</title>
     <meta name="description" content="Personal page of Gurunadh Malli" />
-    <style>
-      :root {
-        --bg: #f7f7f5;
-        --surface: #ffffff;
-        --text: #1d1d1f;
-        --muted: #5f6368;
-        --accent: #2563eb;
-        --border: #e3e3e0;
-      }
-      @media (prefers-color-scheme: dark) {
-        :root {
-          --bg: #111214;
-          --surface: #1a1b1e;
-          --text: #ececec;
-          --muted: #a0a4ab;
-          --accent: #60a5fa;
-          --border: #2a2c30;
-        }
-      }
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-      body {
-        font-family:
-          system-ui,
-          -apple-system,
-          "Segoe UI",
-          Roboto,
-          sans-serif;
-        background: var(--bg);
-        color: var(--text);
-        line-height: 1.6;
-        padding: 48px 16px;
-      }
-      main {
-        max-width: 720px;
-        margin: 0 auto;
-      }
-      header {
-        display: flex;
-        align-items: center;
-        gap: 24px;
-        margin-bottom: 40px;
-      }
-      .avatar {
-        width: 96px;
-        height: 96px;
-        border-radius: 50%;
-        background: var(--accent);
-        color: #fff;
-        display: grid;
-        place-items: center;
-        font-size: 2rem;
-        font-weight: 700;
-        flex-shrink: 0;
-      }
-      h1 {
-        font-size: 2rem;
-        line-height: 1.2;
-      }
-      .tagline {
-        color: var(--muted);
-        margin-top: 4px;
-      }
-      section {
-        background: var(--surface);
-        border: 1px solid var(--border);
-        border-radius: 12px;
-        padding: 24px;
-        margin-bottom: 20px;
-      }
-      h2 {
-        font-size: 1.1rem;
-        margin-bottom: 12px;
-      }
-      ul {
-        list-style: none;
-      }
-      .skills {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 8px;
-      }
-      .skills li {
-        border: 1px solid var(--border);
-        border-radius: 999px;
-        padding: 4px 12px;
-        font-size: 0.9rem;
-      }
-      .projects li + li {
-        margin-top: 14px;
-      }
-      .projects strong {
-        display: block;
-      }
-      .projects span {
-        color: var(--muted);
-        font-size: 0.95rem;
-      }
-      .links li + li {
-        margin-top: 6px;
-      }
-      a {
-        color: var(--accent);
-        text-decoration: none;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-      footer {
-        text-align: center;
-        color: var(--muted);
-        font-size: 0.85rem;
-        margin-top: 32px;
-      }
-      @media (max-width: 480px) {
-        header {
-          flex-direction: column;
-          text-align: center;
-        }
-      }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <main>
-      <header>
+    <!-- Decorative background blobs -->
+    <div class="bg" aria-hidden="true">
+      <span class="blob b1"></span>
+      <span class="blob b2"></span>
+      <span class="blob b3"></span>
+    </div>
+
+    <nav class="nav glass">
+      <a href="#top" class="brand">GM</a>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main id="top">
+      <header class="hero glass">
         <div class="avatar">GM</div>
-        <div>
+        <div class="hero-text">
+          <p class="eyebrow">Hello, I'm</p>
           <h1>Gurunadh Malli</h1>
           <p class="tagline">
             Developer · Learning GitHub Actions &amp; DevOps
           </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#projects">View projects</a>
+            <a class="btn" href="#contact">Get in touch</a>
+          </div>
         </div>
       </header>
 
-      <section>
-        <h2>About me</h2>
-        <p>
-          Hi, I'm Gurunadh. I enjoy building things for the web and automating
-          workflows. Right now I'm exploring CI/CD with GitHub Actions.
-          <!-- Edit this paragraph to describe yourself. -->
-        </p>
-      </section>
+      <div class="grid">
+        <section id="about" class="glass">
+          <h2>About me</h2>
+          <p>
+            Hi, I'm Gurunadh. I enjoy building things for the web and automating
+            workflows. Right now I'm exploring CI/CD with GitHub Actions.
+            <!-- Edit this paragraph to describe yourself. -->
+          </p>
+        </section>
 
-      <section>
-        <h2>Skills</h2>
-        <ul class="skills">
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>JavaScript</li>
-          <li>Git &amp; GitHub</li>
-          <li>GitHub Actions</li>
-        </ul>
-      </section>
+        <section id="skills" class="glass">
+          <h2>Skills</h2>
+          <ul class="skills">
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li class="git">Git &amp; GitHub</li>
+            <li>GitHub Actions</li>
+          </ul>
+        </section>
+      </div>
 
-      <section>
-        <h2>Projects</h2>
+      <section id="projects">
+        <h2 class="section-title">Projects</h2>
         <ul class="projects">
-          <li>
+          <li class="glass card">
+            <span class="card-icon">◆</span>
             <strong>Personal website</strong>
             <span>This page, deployed automatically with GitHub Actions.</span>
           </li>
-          <li>
+          <li class="glass card">
+            <span class="card-icon">✦</span>
             <strong>Your next project</strong>
             <span>Add a short description here.</span>
           </li>
         </ul>
       </section>
 
-      <section>
+      <section id="contact" class="glass">
         <h2>Contact</h2>
         <ul class="links">
           <li>
-            Email:
-            <a href="mailto:gurunadhmalli55@gmail.com"
-              >gurunadhmalli55@gmail.com</a
-            >
+            <a href="mailto:gurunadhmalli55@gmail.com">
+              <small>Email</small>
+              gurunadhmalli55@gmail.com
+            </a>
           </li>
           <li>
-            GitHub:
-            <a href="https://github.com/your-username"
-              >github.com/your-username</a
-            >
+            <a href="https://github.com/your-username">
+              <small>GitHub</small>
+              github.com/your-username
+            </a>
           </li>
           <li>
-            LinkedIn:
-            <a href="https://www.linkedin.com/in/your-profile"
-              >linkedin.com/in/your-profile</a
-            >
+            <a href="https://www.linkedin.com/in/your-profile">
+              <small>LinkedIn</small>
+              linkedin.com/in/your-profile
+            </a>
           </li>
         </ul>
       </section>
